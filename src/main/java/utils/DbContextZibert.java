@@ -1,8 +1,6 @@
 package utils;
 
-import entities.Author;
-import entities.Book;
-import entities.Role;
+import entities.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -18,6 +16,8 @@ public class DbContextZibert {
                 configuration.addAnnotatedClass(Role.class);
                 configuration.addAnnotatedClass(Author.class);
                 configuration.addAnnotatedClass(Book.class);
+                configuration.addAnnotatedClass(Category.class);
+                configuration.addAnnotatedClass(Product.class);
 
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties());

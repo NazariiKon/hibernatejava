@@ -22,22 +22,22 @@ public class Main {
 //        List<Role> roles = query.list();
 //        for (Role role : roles)
 //            System.out.println(role);
-
-        Author peter = new Author();
-        peter.setFullName("Петро Могилев");
-        Author ivan = new Author();
-        ivan.setFullName("Іван Кабан");
-        Book garik = new Book();
-        garik.setName("Гарі Потер");
-        garik.setAuthor(peter);
-
-        Book rusalka = new Book();
-        rusalka.setName("Русалка на прогулці");
-        rusalka.setAuthor(ivan);
-
-        Book slavik = new Book();
-        slavik.setName("Походи Славіка");
-        slavik.setAuthor(ivan);
+//
+//        Author peter = new Author();
+//        peter.setFullName("Петро Могилев");
+//        Author ivan = new Author();
+//        ivan.setFullName("Іван Кабан");
+//        Book garik = new Book();
+//        garik.setName("Гарі Потер");
+//        garik.setAuthor(peter);
+//
+//        Book rusalka = new Book();
+//        rusalka.setName("Русалка на прогулці");
+//        rusalka.setAuthor(ivan);
+//
+//        Book slavik = new Book();
+//        slavik.setName("Походи Славіка");
+//        slavik.setAuthor(ivan);
 
         SessionFactory sessionFactory = null;
         Session session = null;
@@ -48,12 +48,14 @@ public class Main {
             System.out.println("Session open");
             tx = session.beginTransaction();
 
-            session.save(peter);
-            session.save(ivan);
 
-            session.save(garik);
-            session.save(rusalka);
-            session.save(slavik);
+//            session.delete(book);
+//            session.save(peter);
+//            session.save(ivan);
+//
+//            session.save(garik);
+//            session.save(rusalka);
+//            session.save(slavik);
 
             tx.commit();
         } catch (Exception ex) {
