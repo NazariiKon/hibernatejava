@@ -18,4 +18,9 @@ public class Author {
 
     @OneToMany(mappedBy = "author")
     private Set<Book> books;
+    @ManyToMany
+    @JoinTable (name="author_role",
+            joinColumns=@JoinColumn (name="author_id"),
+            inverseJoinColumns=@JoinColumn(name="role_id"))
+    private Set<Role> roles;
 }

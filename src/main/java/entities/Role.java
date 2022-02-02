@@ -17,4 +17,9 @@ public class Role {
     private int id;
     @Column(length = 200, nullable = false)
     private String name;
+    @ManyToMany
+    @JoinTable(name="author_role",
+            joinColumns=@JoinColumn(name="role_id"),
+            inverseJoinColumns=@JoinColumn(name="author_id"))
+    private Set<Author> authors;
 }
